@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <style>
+        body {
+            background-color: black;
+            color: #8B0000; /* Vermelho escuro */
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #8B0000;
+            border-radius: 5px;
+            background-color: #222;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #8B0000;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+        }
+        button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #A52A2A;
+        }
+        #logo {
+            width: 480px;
+            height: 270px;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+        }
+    </style>
+</head>
+<img id="logo" src="img/foto.png" alt="Logotipo">
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <form id="cadastroForm">
+        <label for="nomeCliente">Nome do Cliente:</label>
+        <input type="text" id="nomeCliente" required>
+
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" required>
+
+        <label for="cpfCnpj">CPF ou CNPJ:</label>
+        <input type="text" id="cpfCnpj" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+
+        <label for="orcamento">Orçamento (R$):</label>
+        <input type="number" id="orcamento" required>
+
+        <label for="dataAtendimento">Data do Atendimento:</label>
+        <input type="date" id="dataAtendimento" required>
+
+        <label for="atendimento">Atendimento</label>
+        <input type="text" id="atendimento" maxlength="300 required">
+
+        <label for="dataRetorno">Data de Retorno:</label>
+        <input type="date" id="dataRetorno" required>
+
+        <button type="button" onclick="adicionarCliente()">Adicionar</button>
+        <button type="button" onclick="buscarCliente()">Buscar</button>
+        <button type="button" onclick="cancelarCadastro()">Cancelar</button>
+        <button type="button" onclick="excluirCliente()">Excluir</button>
+    </form>
+
+    <script>
+        function adicionarCliente() {
+            // Lógica para adicionar cliente ao banco de dados
+            alert("Cliente adicionado!");
+        }
+
+        function buscarCliente() {
+            // Lógica para buscar cliente no banco de dados
+            alert("Buscar cliente!");
+        }
+
+        function cancelarCadastro() {
+            document.getElementById('cadastroForm').reset();
+        }
+
+        function excluirCliente() {
+            // Lógica para excluir cliente do banco de dados
+            alert("Cliente excluído!");
+        }
+    </script>
+</body>
+</html>
