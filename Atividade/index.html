@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+    <style>
+        body {
+            background-color: black;
+            color: #8B0000; /* Vermelho escuro */
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #8B0000;
+            border-radius: 5px;
+            background-color: #222;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #8B0000;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+        }
+        button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #A52A2A;
+        }
+        #logo {
+            width: 480px;
+            height: 270px;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+        }
+    </style>
+</head>
+<img id="logo" src="img/foto.png" alt="Logotipo">
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <form id="cadastroForm">
+        <label for="nomeCliente">Nome</label>
+        <input type="text" id="nomeCliente" required>
+
+         <label for="cpf">CPF</label>
+        <input type="text" id="cpf" required>
+
+        <label for="datanascimento">Data de Nascimento</label>
+        <input type="date" id="datanascimento" required>
+
+        <label for="nomemae">Nome da Mãe</label>
+        <input type="text" id="nomemae" required>
+
+        <label for="nomepae">Nome do Pai</label>
+        <input type="text" id="nomepae" required>
+
+        <label for="cep">CEP</label>
+        <input type="text" id="cep" required>
+
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" maxlength="300 required">
+
+        <label for="bairro">bairro</label>
+        <input type="text" id="bairro" required>
+
+        <label for="cidade">cidade</label>
+        <input type="text" id="cidade" required>
+
+        <label for="estado">Estado</label>
+        <input type="text" id="estado" required>
+
+        <button type="button" onclick="adicionarCliente()">Adicionar</button>
+          <button type="button" onclick="cancelarCadastro()">Cancelar</button>
+    </form>
+
+    <script>
+        function adicionarCliente() {
+            // Lógica para adicionar cliente ao banco de dados
+            alert("Cliente adicionado!");
+        }
+
+        function cancelarCadastro() {
+            document.getElementById('cadastroForm').reset();
+        }
+        }
+    </script>
+</body>
+</html>

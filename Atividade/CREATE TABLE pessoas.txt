@@ -1,0 +1,13 @@
+CREATE TABLE clientes (
+    
+    nome varchar(35),
+    cpf VARCHAR(11),
+    data_nascimento tinyint(8),
+    nome_mae char(35),
+    nome_pai char(35),
+    cep varchar(10),
+    endereco varchar(35),
+    bairro varchar(25),
+    cidade varchar(25),
+    estado varchar(2)
+);
