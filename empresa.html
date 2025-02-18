@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <form id="cadastroForm">
+        <label for="nomeCliente">Nome do Cliente:</label>
+        <input type="text" id="nomeCliente" name="nomeCliente" required>
+        <br><br>
+        <label for="nomeEmpresa">Nome da Empresa:</label>
+        <input type="text" id="nomeEmpresa" name="nomeEmpresa" required>
+        <br><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Clientes Cadastrados:</h2>
+    <ul id="listaClientes"></ul>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nomeCliente = document.getElementById('nomeCliente').value;
+            const nomeEmpresa = document.getElementById('nomeEmpresa').value;
+
+            const listaClientes = document.getElementById('listaClientes');
+            const li = document.createElement('li');
+            li.textContent = `${nomeCliente} - ${nomeEmpresa}`;
+            listaClientes.appendChild(li);
+
+            // Limpar o formulário
+            this.reset();
+        });
+    </script>
+</body>
+</html>
